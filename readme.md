@@ -6,7 +6,7 @@ This is my repo for the project challenges completed in John Baugh's Complete [C
 
 These are all my completed projects for the course. I worked on each of these projects on my own and would watch the accompanying video after completing all tasks.
 
-### Section 5: Functions
+#### Section 5: Functions
 
 - [x] [Tic-Tac-Toe (Advanced)](https://github.com/clockwerkz/tictactoe)
 
