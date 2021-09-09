@@ -8,7 +8,7 @@ These are all my completed projects for the course. I worked on each of these pr
 
 ### Section 5: Functions
 
-- [ ] [Tic-Tac-Toe (Advanced)](https://github.com/clockwerkz/tictactoe)
+- [x] [Tic-Tac-Toe (Advanced)](https://github.com/clockwerkz/tictactoe)
 
 #### Section 11: Templates, the STL, and Other Skills
 
