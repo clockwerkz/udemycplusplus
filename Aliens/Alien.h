@@ -1,5 +1,7 @@
 #ifndef ALIEN_H
 #define ALIEN_H
+#include <cstdlib>
+#include <time.h>
 
 class Alien {
 	public:
@@ -14,6 +16,7 @@ class Alien {
 		bool operator<=(Alien& other);
 		bool operator>(Alien& other);
 		bool operator>=(Alien& other);
+		Alien operator+(Alien& other);
 	private:
 		int weight;
 		int height;
