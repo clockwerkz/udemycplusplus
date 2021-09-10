@@ -30,6 +30,11 @@ int main() {
 		std::cout << " is GREATER than or EQUAL alien " << aliens->at(i).GetPrestige() << ": " << isGreaterThanEqual << std::endl;
 
 	}
+
+	printAlien(aliens->at(2));
+	printAlien(aliens->at(4));
+	aliens->at(2) = aliens->at(4);
+	printAlien(aliens->at(2));
 	return 0;
 }
 void printAlien(Alien& alien) {

@@ -19,7 +19,7 @@ int Alien::GetPrestige() const {
 	return height * weight * genderPoints;
 };
 
-Alien Alien::operator+(Alien& other) {
+Alien Alien::operator+(Alien& other) const {
 	srand(time(nullptr));
 	int childWeight = (this->weight + other.weight) / 2;
 	int childHeight = (this->height + other.height) / 2;
@@ -27,26 +27,32 @@ Alien Alien::operator+(Alien& other) {
 	return Alien(childWeight, childHeight, childGender);
 };
 
-bool Alien::operator==(Alien& other) {
+bool Alien::operator==(Alien& other) const {
 	return this->GetPrestige() == other.GetPrestige();
 };
 
-bool Alien::operator!=(Alien& other) {
+bool Alien::operator!=(Alien& other) const {
 	return this->GetPrestige() != other.GetPrestige();
 };
 
-bool Alien::operator<(Alien& other) {
+bool Alien::operator<(Alien& other) const {
 	return this->GetPrestige() < other.GetPrestige();
 };
 
-bool Alien::operator<=(Alien& other) {
+bool Alien::operator<=(Alien& other) const {
 	return this->GetPrestige() <= other.GetPrestige();
 };
 
-bool Alien::operator>(Alien& other) {
+bool Alien::operator>(Alien& other) const {
 	return this->GetPrestige() > other.GetPrestige();
 };
 
-bool Alien::operator>=(Alien& other) {
+bool Alien::operator>=(Alien& other) const {
 	return this->GetPrestige() >= other.GetPrestige();
 };
+
+void Alien::operator=(Alien& other) {
+	weight = other.weight;
+	height = other.height;
+	gender = other.gender;
+}

@@ -10,13 +10,14 @@ class Alien {
 		int GetHeight() const;
 		char GetGender() const;
 		int GetPrestige() const;
-		bool operator==(Alien& other);
-		bool operator!=(Alien& other);
-		bool operator<(Alien& other);
-		bool operator<=(Alien& other);
-		bool operator>(Alien& other);
-		bool operator>=(Alien& other);
-		Alien operator+(Alien& other);
+		bool operator==(Alien& other) const;
+		bool operator!=(Alien& other) const;
+		bool operator<(Alien& other) const;
+		bool operator<=(Alien& other) const;
+		bool operator>(Alien& other) const;
+		bool operator>=(Alien& other) const;
+		Alien operator+(Alien& other) const;
+		void operator=(Alien& other);
 	private:
 		int weight;
 		int height;
