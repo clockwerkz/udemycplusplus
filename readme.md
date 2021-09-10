@@ -21,4 +21,4 @@ These are all my completed projects for the course. I worked on each of these pr
 #### Section 11: Templates, the STL, and Other Skills
 
 - [x] [Dictionary of Terms](https://github.com/clockwerkz/udemycplusplus/tree/master/DictionaryProject)
-- [x] [Aliens Project](https://github.com/clockwerkz/udemycplusplus/tree/master/Aliens);
+- [x] [Aliens Project](https://github.com/clockwerkz/udemycplusplus/tree/master/Aliens)
