@@ -21,9 +21,9 @@ int Alien::GetPrestige() const {
 
 Alien Alien::operator+(Alien& other) {
 	srand(time(nullptr));
-	int childWeight = (this - weight + other.weight) / 2;
-	int childHeight = (this - height + other.height) / 2;
-	char childGender = rand() % 10 + 1 >= 3 ? 'f' : 'm';
+	int childWeight = (this->weight + other.weight) / 2;
+	int childHeight = (this->height + other.height) / 2;
+	char childGender = rand() % 10 + 1 <= 3 ? 'f' : 'm';
 	return Alien(childWeight, childHeight, childGender);
 };
 
