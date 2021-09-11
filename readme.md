@@ -22,3 +22,7 @@ These are all my completed projects for the course. I worked on each of these pr
 
 - [x] [Dictionary of Terms](https://github.com/clockwerkz/udemycplusplus/tree/master/DictionaryProject)
 - [x] [Aliens Project](https://github.com/clockwerkz/udemycplusplus/tree/master/Aliens)
+
+#### Section 12: Fundamentals of Data Structures
+
+- [x] [The ADT List and ArrayLists](https://github.com/clockwerkz/udemycplusplus/tree/master/ArrayListApp)
