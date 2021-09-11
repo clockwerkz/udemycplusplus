@@ -1,7 +1,14 @@
 #include <iostream>
 #include "ArrayList.h"	
 
+void testArrayList();
+
 int main() {
+	testArrayList();
+	return 0;
+}
+
+void testArrayList() {
 	ArrayList myList;
 	for (int i = 1; i < 16; i++) {
 		myList.add(i * 10);
@@ -15,5 +22,4 @@ int main() {
 	std::cout << "Size is " << myList.size() << std::endl;
 	myList.printList();
 	myList.makeEmpty();
-	return 0;
 }
