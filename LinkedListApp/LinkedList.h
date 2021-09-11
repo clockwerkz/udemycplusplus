@@ -29,20 +29,23 @@ class LinkedList : public List {
 
 		void add(int newEntry, int position) {
 			if (position > mNumElements + 1 || position < 0) {
-				std::cout << "Position is out of current range of Elements" << std::endl;
+				std::cout << "Position " << position << " is out of current range of Elements (" << mNumElements << ")" << std::endl;
 				return;
 			}
+			Node* newNode = new Node{ newEntry, mHead };
 			if (position == 0) {
-				return add(newEntry);
+				mHead = newNode;
 			}
-			Node* prevPtr = mHead;
-			for (int i=0; i < position - 1; i++)
-			{
-				prevPtr = prevPtr->next;
+			else {
+				Node* prevPtr = mHead;
+				for (int i=0; i < position - 1; i++)
+				{
+					prevPtr =  prevPtr->next;
+				}
+				Node* nextNode = prevPtr->next;
+				prevPtr->next = newNode;
+				newNode->next = nextNode;
 			}
-			std::cout << "Previous Node: " << prevPtr->data << std::endl;
-			Node* newNode = new Node{ newEntry, prevPtr->next };
-			prevPtr->next = newNode;
 			mNumElements++;
 		};
 
@@ -69,16 +72,51 @@ class LinkedList : public List {
 		};
 	
 		int find(int entry) const {
-
+			int position = 0;
+			Node* ptr = mHead;
+			while (ptr != nullptr) {
+				if (ptr->data == entry) {
+					return position;
+				}
+				position++;
+				ptr = ptr->next;
+			}
 			return -1;
 		};
 
 		int remove(int position) {
-			return -1;
+			if (position > mNumElements - 1 || position < 0) {
+				std::cout << "Position is out of current range of Elements" << std::endl;
+				return -1;
+			}
+			Node* nodeToDelete;
+			if (position == 0) {
+				nodeToDelete = mHead;
+				mHead = mHead->next;
+
+			}
+			else {
+				Node* prevPtr = mHead;
+				for (int i = 0; i < position - 1; i++) {
+					prevPtr = prevPtr->next;
+				}
+				nodeToDelete = prevPtr->next;
+				prevPtr->next = prevPtr->next->next;
+			}
+			delete nodeToDelete;
+			mNumElements--;
 		};
 
 		void makeEmpty() {
-		
+			Node* ptr = mHead;
+			while (ptr != nullptr) {
+				Node* NodeToDelete = ptr;
+				ptr = ptr->next;
+				std::cout << "curren iteration - ptr: " << ptr->data << ", nodeToDelete: " << NodeToDelete->data << std::endl;
+				std::cout << "ptr's next value: " << ptr->next <<  (ptr->next == nullptr ? "true" : "false") << std::endl;
+				delete NodeToDelete;
+			}
+			mNumElements = 0;
 		};
 
 		int size() const {
@@ -86,7 +124,7 @@ class LinkedList : public List {
 		};
 
 		bool isEmpty() const {
-			return false;
+			return mNumElements == 0;
 		};
 
 		void printList() const {
