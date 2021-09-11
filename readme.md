@@ -10,6 +10,15 @@ These are all my completed projects for the course. I worked on each of these pr
 
 - [x] [Tic-Tac-Toe (Advanced)](https://github.com/clockwerkz/tictactoe)
 
+#### Section 9: File Input and Output
+
+- [x] [GroceryList / Shopping Item File](https://github.com/clockwerkz/udemycplusplus/tree/master/GroceryList)
+
+#### Section 10: Inheritance and Polymorphism
+
+- [x] [RPG Player Character Creation](https://github.com/clockwerkz/udemycplusplus/tree/master/RPGCharacterCreator)
+
 #### Section 11: Templates, the STL, and Other Skills
 
-- [ ] [Dictionary of Terms](https://github.com/clockwerkz/udemycplusplus/tree/master/DictionaryProject)
+- [x] [Dictionary of Terms](https://github.com/clockwerkz/udemycplusplus/tree/master/DictionaryProject)
+- [x] [Aliens Project](https://github.com/clockwerkz/udemycplusplus/tree/master/Aliens)
