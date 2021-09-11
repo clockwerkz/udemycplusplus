@@ -103,18 +103,20 @@ class LinkedList : public List {
 				nodeToDelete = prevPtr->next;
 				prevPtr->next = prevPtr->next->next;
 			}
+			int dataToReturn = nodeToDelete->data;
 			delete nodeToDelete;
 			mNumElements--;
+			return dataToReturn;
 		};
 
 		void makeEmpty() {
 			Node* ptr = mHead;
 			while (ptr != nullptr) {
 				Node* NodeToDelete = ptr;
+				std::cout << NodeToDelete->next << std::endl;
 				ptr = ptr->next;
-				std::cout << "curren iteration - ptr: " << ptr->data << ", nodeToDelete: " << NodeToDelete->data << std::endl;
-				std::cout << "ptr's next value: " << ptr->next <<  (ptr->next == nullptr ? "true" : "false") << std::endl;
-				delete NodeToDelete;
+				std::cout << "ptr Next: " << ptr << std::endl;
+				//delete NodeToDelete;
 			}
 			mNumElements = 0;
 		};

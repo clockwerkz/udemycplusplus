@@ -40,7 +40,7 @@ void testLinkedList() {
 	std::cout << "Removing position 7:\n";
 	myList.remove(7);
 	myList.printList();
-	//myList.makeEmpty();
+	myList.makeEmpty();
 	/*
 	std::cout << "Size is " << myList.size() << std::endl;
 	myList.makeEmpty();
