@@ -24,7 +24,8 @@ class LinkStack : public Stack {
 			int data = mTop->data;
 			mTop = mTop->next;
 			delete nodeToDelete;
-			std::cout << "mTop is pointing to: " << mTop << std::boolalpha << " nullptr? " << (mTop == nullptr) << std::endl;
+			//std::cout << "mTop is pointing to: " << mTop << std::boolalpha << " nullptr? " << (mTop == nullptr) << std::endl;
+			return data;
 		};
 		
 		int peek() const {
