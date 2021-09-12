@@ -110,14 +110,10 @@ class LinkedList : public List {
 		};
 
 		void makeEmpty() {
+			std::cout << "makeEmpty called\n";
 			Node* NodeToDelete;
-			//Node* ptr = mHead;
-			//while (ptr != nullptr) {
-			//	NodeToDelete = ptr;
-			//	/*std::cout << NodeToDelete->next << std::endl;*/
-			//	ptr = ptr->next;
-			//	delete NodeToDelete;
-			//}
+			Node* ptr = mHead;
+			
 			while (mHead != nullptr) {
 				NodeToDelete = mHead;
 				mHead =mHead->next;

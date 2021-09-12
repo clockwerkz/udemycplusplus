@@ -36,6 +36,8 @@ void testLinkedList() {
 	myList.printList();
 	std::cout << "Removing position " << myList.size() -1 <<":\n";
 	myList.remove(myList.size() - 1);
+	std::cout << "Removing position: " << myList.size() << ":\n";
+	myList.remove(myList.size());
 	myList.printList();
 	std::cout << "Removing position 7:\n";
 	myList.remove(7);
