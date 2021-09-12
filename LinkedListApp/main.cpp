@@ -41,8 +41,7 @@ void testLinkedList() {
 	myList.remove(7);
 	myList.printList();
 	myList.makeEmpty();
-	/*
 	std::cout << "Size is " << myList.size() << std::endl;
-	myList.makeEmpty();
-	*/
+
+	
 }
