@@ -22,13 +22,24 @@ class LinkQueue : public Queue {
 			}
 			else {
 				back->next = newNode;
+				newNode->prev = back;
+				back = newNode;
 			}
 		};
 		
 		virtual int dequeue() {
+			if (isEmpty()) {
+				return -1;
+			}
+			Node* nodeToDelete = front;
+			front = front->next;
+			int data = nodeToDelete->data;
+			delete nodeToDelete;
+			return data;
 		};
 		
 		int peekFront() const {
+			return front->data;
 		};
 
 		bool isEmpty() const {
@@ -36,7 +47,21 @@ class LinkQueue : public Queue {
 		};
 
 		void makeEmpty() {
+			if (!isEmpty()) {
+				return;
+			}
+			Node* nodeToDelete;
+			while (front != nullptr) {
+				nodeToDelete = front;
+				front = front->next;
+				delete nodeToDelete;
+			}
+			front = back = nullptr;
 		};
+
+		virtual ~LinkQueue() {
+			makeEmpty();
+		}
 	private:
 		Node* front;
 		Node* back;

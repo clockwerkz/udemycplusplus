@@ -2,7 +2,7 @@
 #include "LinkQueue.h"
 
 int main() {
-	LinkQueue* queue = new LinkQueue(30);
+	LinkQueue* queue = new LinkQueue();
 	for (int i = 1; i < 31; i++) {
 		queue->enqueue(i*100);
 	}
