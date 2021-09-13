@@ -11,7 +11,7 @@ class ArrayQueue : public Queue {
 			mNumElements = 0;
 		}
 		void enqueue(int newEntry) {
-			if (mNumElements >= MAX_SIZE - 1)
+			if (mNumElements >= MAX_SIZE)
 			{
 				std::cout << "Queue is full, cannot add any more elements.\n";
 				return;
