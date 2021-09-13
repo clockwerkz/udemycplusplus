@@ -1,8 +1,8 @@
 #include <iostream>
-#include "ArrayQueue.h"
+#include "LinkQueue.h"
 
 int main() {
-	ArrayQueue* queue = new ArrayQueue(30);
+	LinkQueue* queue = new LinkQueue(30);
 	for (int i = 1; i < 31; i++) {
 		queue->enqueue(i*100);
 	}
