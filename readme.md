@@ -26,3 +26,6 @@ These are all my completed projects for the course. I worked on each of these pr
 #### Section 12: Fundamentals of Data Structures
 
 - [x] [The ADT List and ArrayLists](https://github.com/clockwerkz/udemycplusplus/tree/master/ArrayListApp)
+- [x] [LinkList ADT List Implementation](https://github.com/clockwerkz/udemycplusplus/tree/master/LinkedListApp)
+- [x] [The ADT stack and ArrayuStacks](https://github.com/clockwerkz/udemycplusplus/tree/master/ArrayStackApp)
+- [x] [LinkStack ADT Stack Implementation](https://github.com/clockwerkz/udemycplusplus/tree/master/LinkedStackApp)

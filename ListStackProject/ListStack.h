@@ -29,7 +29,7 @@ class ListStack : public Stack {
 				return -1;
 			}
 			int data = stack->remove(0);
-			stack->add(data, 0);
+			stack->add(data);
 			return data;
 		};
 
@@ -42,7 +42,7 @@ class ListStack : public Stack {
 	
 		};
 		virtual ~ListStack() {
-			stack->makeEmpty();
+			makeEmpty();
 			delete stack;
 		}
 	private:
