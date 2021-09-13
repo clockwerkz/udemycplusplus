@@ -6,6 +6,7 @@ int main() {
 	for (int i = 1; i < 31; i++) {
 		queue->enqueue(i*100);
 	}
+	std::cout << "finished" << std::endl;
 	while (!queue->isEmpty()) {
 		std::cout << "dequeuing: " << queue->dequeue() << std::endl;
 	}

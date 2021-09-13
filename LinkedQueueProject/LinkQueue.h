@@ -16,15 +16,14 @@ class LinkQueue : public Queue {
 			back = nullptr;
 		}
 		void enqueue(int newEntry) {
-			Node* newNode = new Node{ newEntry };
+			Node* newNode = new Node{ newEntry, back, nullptr };
 			if (front == nullptr) {
-				front = back = newNode;
+				front = newNode;
 			}
 			else {
 				back->next = newNode;
-				newNode->prev = back;
-				back = newNode;
 			}
+			back = newNode;
 		};
 		
 		virtual int dequeue() {
