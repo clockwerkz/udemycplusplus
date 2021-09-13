@@ -6,6 +6,8 @@ class ArrayQueue : public Queue {
 	public:
 		ArrayQueue(int MAX_SIZE = 16) : MAX_SIZE(MAX_SIZE) {
 			queue = new int[MAX_SIZE];
+			front = 0;
+			back = 0;
 			mNumElements = 0;
 		}
 		void enqueue(int newEntry) {
@@ -14,7 +16,9 @@ class ArrayQueue : public Queue {
 				std::cout << "Queue is full, cannot add any more elements.\n";
 				return;
 			}
-			queue[mNumElements++] = newEntry;
+			queue[back] = newEntry;
+			back = (back + 1) % MAX_SIZE;
+			mNumElements++;
 		};
 		
 		int dequeue() {
@@ -22,11 +26,9 @@ class ArrayQueue : public Queue {
 				std::cout << "Queue is currently empty, no elements to return.\n";
 				return -1;
 			}
-			int data = queue[0];
+			int data = queue[front];
+			front = (front + 1) % MAX_SIZE;
 			mNumElements--;
-			for (int i = 0; i < mNumElements-1; i++) {
-				queue[i] = queue[i + 1];
-			}
 			return data;
 		};
 		
@@ -35,7 +37,7 @@ class ArrayQueue : public Queue {
 				std::cout << "Queue is currently empty, no elements to return.\n";
 				return -1;
 			}
-			return queue[0];
+			return queue[front];
 		};
 		
 		bool isEmpty() const {
@@ -44,14 +46,18 @@ class ArrayQueue : public Queue {
 		
 		void makeEmpty() {
 			mNumElements = 0;
+			front = 0;
+			back = 0;
 		};
 
 		virtual ~ArrayQueue() {
-			delete queue;
+			delete[] queue;
 		}
 	private:
 		int* queue;
 		int MAX_SIZE;
+		int front;
+		int back;
 		int mNumElements;
 };
 
