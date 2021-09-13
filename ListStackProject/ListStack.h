@@ -1,5 +1,6 @@
 #ifndef LIST_STACK_H
 #define LIST_STACK_H
+#include <iostream> //TODO: Replace print error msgs with exception throwing
 #include "Stack.h"
 #include "LinkedList.h"
 
@@ -10,11 +11,12 @@ class ListStack : public Stack {
 		}
 		void push(int element) {
 			int last = stack->size();
-			stack->add(element, last);
+			stack->add(element, 0);
 		};
 
 		int pop() {
 			if (stack->isEmpty()) {
+				std::cout << "No elements to return, stack is empty\n";
 				return -1;
 			}
 			int data = stack->remove(0);
@@ -23,6 +25,7 @@ class ListStack : public Stack {
 
 		int peek() const {
 			if (stack->isEmpty()) {
+				std::cout << "No elements to view, stack is empty\n";
 				return -1;
 			}
 			int data = stack->remove(0);
