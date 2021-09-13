@@ -17,7 +17,7 @@ class LinkQueue : public Queue {
 		}
 		void enqueue(int newEntry) {
 			Node* newNode = new Node{ newEntry, back, nullptr };
-			if (front == nullptr) {
+			if (isEmpty()) {
 				front = newNode;
 			}
 			else {
@@ -34,6 +34,12 @@ class LinkQueue : public Queue {
 			front = front->next;
 			int data = nodeToDelete->data;
 			delete nodeToDelete;
+			if (front == nullptr) {
+				back = nullptr;
+			}
+			else {
+				front->prev = nullptr;
+			}
 			return data;
 		};
 		
